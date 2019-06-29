@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+
+    <title>Title</title>
+</head>
+<body>
+
+    <ul>
+        <li th:each="menu: ${menus}">
+            <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.name}"></a>
+        </li>
+    </ul>
+
+    <a th:href="@{'/menu/add/'}">Add Menu</a>
+
+</body>
+</html>
